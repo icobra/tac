@@ -30,7 +30,7 @@ def counter(position, variable):
             ecc_value.append(1)
     return ecc_value
   
-def to_hemming(value, position = POSITION16_5):
+def to_hamming(value, position = POSITION16_5):
     bit16 = str(value)
     if len(bit16) != 16:
         raise ValueError("Error кооличество разрядов не равно 16")
@@ -108,23 +108,23 @@ def test():
 
     print("\nCoder test")
     try:
-        k = to_hemming(a)
+        k = to_hamming(a)
     except ValueError as e:
         print(e)
-    k = to_hemming(num1)
+    k = to_hamming(num1)
     print(k)
     try:
-        k = to_hemming(num2)
+        k = to_hamming(num2)
     except ValueError as e:
         print(e)
-    k = to_hemming(num3)
+    k = to_hamming(num3)
     print(k)
     try:
-        k = to_hemming(num4)
+        k = to_hamming(num4)
     except ValueError as e:
         print(e)
     print("habra_word ", habra_word)
-    habra_word_21 = to_hemming(habra_word)
+    habra_word_21 = to_hamming(habra_word)
     print(habra_word_21)
 
     print("\nDecoder test")
